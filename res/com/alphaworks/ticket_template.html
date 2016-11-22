@@ -1,0 +1,105 @@
+<html>
+<head>
+	<style type='text/css'>
+
+		body, html {
+			font-family: sans;
+		}
+
+		h1.title {
+			color: red;
+			font-family: sans;
+			font-size: 20px;
+			text-decoration: underline;
+		}
+
+		div.container {
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		ul.info-list {
+			list-style:  none;
+		}
+
+		ul.info-list li {
+			font-size: 14px;
+		}
+
+		ul.info-list li span {
+			width: 90px;
+			font-weight: bold;
+			display: inline-block;
+		}
+
+		.tbl {
+			margin-top: 15px;
+			width: 100%;
+		}
+
+		.tbl .thead {
+			background-color: #f9f9f9;
+		}
+
+		.tbl .thead td {
+			font-size: 16px;
+			color: #000;
+			font-style: italic;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.tbl tbody {
+			font-size: 14px;
+		}
+
+
+
+		p.wish {
+			text-align: center;
+		}
+
+		p.notice {
+			font-size: 10px;
+		}
+		.clearfix {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div class='media' data-src='railway.png' style='display: inline-block; width: 70px;height: 70px;' />
+		<h1 class='title'>Online Reservation Portal</h1>
+	</center>
+	<div class='container'>
+		<ul class='info-list' style='float: left; margin-left: -40px;'>
+			<li><span>Ticket No </span>: {{ticket}}</li>
+			<li><span>Date </span>: {{date}}</li>
+		</ul>
+		<ul class='info-list' style='float: right;'>
+			<li><span>From </span>: {{from}}</li>
+			<li><span>To </span>: {{to}}</li>
+		</ul>
+		<div class='clearfix'></div>
+		<table class='tbl'  border='1' cellspacing ='0' cellpadding='9px'>
+			<tr class='thead'>
+				<td>No.</td>
+				<td>Name</td>
+				<td>ID</td>
+				<td>Age</td>
+				<td>Seat No.</td>
+			</tr>
+			{{row}}
+			<tr>
+				<td colspan='4'>
+					<strong style='text-align: right; display: inline-block; width: 100%;'>Total </strong>
+				</td>
+				<td>{{total}}</td>
+			</tr>
+		</table>
+		<p class='wish'>Wish you a happy journey!</p>
+		<p class='notice'><span style='font-size: 15px; color: red; margin:0;'>*</span>Please keep your ticket safe during the journey. Travelling without a ticket is a crime and will be fined Rs. 500/- each. </p> 
+		<p style='font-size: 11px; margin-top: 0;'>For any further details, please visit our customer help portal <a href="#">https://www.indianrailway.gov.in/help </a>.</p>
+	</div>
+</body>
+</html>

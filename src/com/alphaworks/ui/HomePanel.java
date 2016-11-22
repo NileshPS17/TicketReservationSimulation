@@ -6,7 +6,6 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -16,6 +15,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.alphaworks.R;
+
+@SuppressWarnings("serial")
 public class HomePanel extends JPanel implements ActionListener {
 
 	public static final String EVENT_SEARCH = "search";
@@ -31,12 +33,12 @@ public class HomePanel extends JPanel implements ActionListener {
 	private BufferedImage mImage;
 
 	public HomePanel() {
-		btnSearch = new JButton("Search", new ImageIcon("res/search.png"));
-		btnPrint = new JButton("Print Ticket", new ImageIcon("res/print.png"));
-		btnReserve = new JButton("Reserve Ticket", new ImageIcon("res/reserve.png"));
-		btnCancel = new JButton("Cancel", new ImageIcon("res/cancel.png"));
-		btnStatus = new JButton("Status", new ImageIcon("res/status.png"));
-		btnSchedule = new JButton("Schedule", new ImageIcon("res/time.png"));
+		btnSearch = new JButton("Search", R.loadIcon("search.png"));
+		btnPrint = new JButton("Print Ticket", R.loadIcon("print.png"));
+		btnReserve = new JButton("Reserve Ticket", R.loadIcon("reserve.png"));
+		btnCancel = new JButton("Cancel", R.loadIcon("cancel.png"));
+		btnStatus = new JButton("Status", R.loadIcon("status.png"));
+		btnSchedule = new JButton("Schedule", R.loadIcon("time.png"));
 
 		init();
 	}
@@ -70,7 +72,7 @@ public class HomePanel extends JPanel implements ActionListener {
 		btnSchedule.addActionListener(this);
 
 		try {
-			mImage = ImageIO.read(new File("res/railway.png"));
+			mImage = ImageIO.read(R.loadFile("railway.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -122,7 +124,7 @@ public class HomePanel extends JPanel implements ActionListener {
 	}
 
 	/**
-	 * Set a callback to be invoked when one of the menu items is clicked.
+	 * Set a callback to be invoked when one of the menu items are clicked.
 	 * 
 	 * @param l
 	 *            An instance of OnMenuClickedListener
