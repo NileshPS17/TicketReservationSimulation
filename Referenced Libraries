@@ -1,0 +1,11 @@
+DatePicker  [ Popup for selecting date ]
+http://liquidtelecom.dl.sourceforge.net/project/datepicker/datepicker/DatePicker%20V0.99/DatePicker-V0.99-2006.09.01.jar
+
+iText [ HTML to PDF conversion ] 
+http://developers.itextpdf.com/
+
+Apache Commons [ Utility library + dependency(iText) ]
+https://commons.apache.org/
+
+Jewel CLI  [ Command line parsing ]
+http://jewelcli.lexicalscope.com/
